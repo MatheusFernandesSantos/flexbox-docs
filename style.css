@@ -1,0 +1,56 @@
+/* (Mini) Reset do CSS do navegador para evitar conflito de estilos entre navegadores. Podemos definir os próprios reset. */
+
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: initial;
+    font-weight: 400;
+    text-align: initial;
+}
+
+
+:root {
+    --cor-primaria: #14023d;
+    --cor-secundaria: #3729b8;
+    --cor-terciaria: #04d7f3;
+    --cor-quartenaria: #48e400;
+    --cor-fundo: #00ffff;
+    --fonte-primaria: 'Times New Roman', serif;
+    --fonte-secundaria: Arial, Helvetica, sans-serif;
+}
+
+ body {
+    margin: 25px 25px;
+    background-color: var(--cor-fundo);
+ }
+
+ table, th, td {
+    border: 1px solid;
+ }
+
+table {
+    width: 50%;
+    
+}
+
+.container {
+    height: 500px;
+    background-color: var(--cor-secundaria);
+    border: 40px solid var(--cor-primaria); /* Equivalente à cor #000000 */
+    display: flex;
+    border-radius: 15%;
+}
+
+/* Estilos da página que sobrescreverão os resets anteriores */
+
+.contido {
+    width: 150px;
+    height: 150px;
+    background-color: var(--cor-terciaria);
+    border: 1px solid var(--cor-quartenaria);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+}
