@@ -1,6 +1,6 @@
 /* (Mini) Reset do CSS do navegador para evitar conflito de estilos entre navegadores. Podemos definir os próprios reset. */
 
-{
+html{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -12,15 +12,15 @@
 
 :root {
     --cor-primaria: #14023d;
-    --cor-secundaria: #3729b8;
+    --cor-secundaria: #ffffff;
     --cor-terciaria: #04d7f3;
     --cor-quartenaria: #48e400;
-    --cor-fundo: #00ffff;
+    --cor-fundo: #ffffff;
     --fonte-primaria: 'Times New Roman', serif;
     --fonte-secundaria: Arial, Helvetica, sans-serif;
 }
 
- body {
+body {
     margin: 25px 25px;
     background-color: var(--cor-fundo);
  }
@@ -34,12 +34,34 @@ table {
     
 }
 
-.container {
-    height: 500px;
+.container1  {
+    height: 1500px;
     background-color: var(--cor-secundaria);
     border: 40px solid var(--cor-primaria); /* Equivalente à cor #000000 */
+    border-radius: 1%;
     display: flex;
-    border-radius: 15%;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container2  {
+    height: 1500px;
+    background-color: var(--cor-secundaria);
+    border: 40px solid var(--cor-primaria); /* Equivalente à cor #000000 */
+    border-radius: 1%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container3  {
+    height: 1500px;
+    background-color: var(--cor-secundaria);
+    border: 40px solid var(--cor-primaria); /* Equivalente à cor #000000 */
+    border-radius: 1%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* Estilos da página que sobrescreverão os resets anteriores */
@@ -48,9 +70,19 @@ table {
     width: 150px;
     height: 150px;
     background-color: var(--cor-terciaria);
-    border: 1px solid var(--cor-quartenaria);
+    border: 2px solid var(--cor-quartenaria);
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 100%;
+    color: var(--cor-terciaria);
+    border-radius: 5px;
+    transition: all, .35s;
+    margin: 10px 0 10px 0;
+}
+
+.contido:hover {
+    background-color: #48e400;
+    width: 1700px;
+    color: black;
+    font-size: 14px;
 }
