@@ -8,14 +8,14 @@
 
 </head>
 <body>
-    <h1 class="titulo-pricipal">Flexbox</h1>
-    <h2 class="subtitulo-principal">Documentação</h2>
-    <h3 class="titulo-de-artigo">Display</h3>
-    <p class="descricao-propriedade">
-        A primeira propriedade que precisa ser declarada para que o Flexbox funcione!
-    </p>
-    <p class="descricao-propriedade">Algumas propriedades como flex-direction, justify-content e aling-content já vem com os valores padrão.</p>
-    
+    <header>
+        <h1 class="titulo-pricipal">Flexbox</h1>
+        <h2 class="subtitulo-principal">Documentação</h2>
+        <h3 class="titulo-de-artigo">Display</h3>
+        <p class="descricao-propriedade">A primeira propriedade que precisa ser declarada para que o Flexbox funcione!</p>
+        <p class="descricao-propriedade">Algumas propriedades como flex-direction, justify-content e aling-content já vem com os valores padrão.</p>
+    </header>
+
     <!--  Comando para criar a Tabela completa de uam vez
         table>(tr>th.propriedade+th.valor)+tr*3>td.propriedades+td.valor 
         ou table>(tr>th.propriedade+th.valor)*4
@@ -57,64 +57,299 @@
         
     </table>
     
-    <p>Exemplo:</p>
-    <div class="container flex">
-        <div class="contido">Flex</div>
-    </div>
+    <section class="container">
+        <details>
+            <summary>Propriedades</summary>
+            <section class="property">
+                <h2>display</h2>
+                <p>Esta propriedade define um container flex, inline ou block dependendo do valor recebido. Isto habilita o flex para todos os filhos de um elemento pai</p>
+                <pre>
+                    .container {
+                        display: flex;
+                    }
+                </pre>
+                <h2>Exemplo:</h2>
+                <div class="examples">
+                    <div class="contido flex">
+                        <div class="contido">1</div>
+                        <div class="contido">2</div>
+                        <div class="contido">3</div>
+                        <div class="contido">4</div>
+                        <div class="contido">5</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="property">
+                <h2>flex-direction</h2>
+                <p>Esta propriedade define o alinhamento no eixo horizontal. Isto ajuda a distribuir espaço livre de sobra quando os itens numa linha são inflexíveis, ou são flexíveis mas alcançaram seu tamanho máximo. Também excerce um controle sobre o alinhamento quando os itens transbordam a linha.</p>
+                <pre>
+                    .container {
+                        justify-content: flex-start | flex-end | center | space-between | space-around | space-evenly;
+                    }
+                </pre>
+                <h3>Exemplos:</h3>
+                <div class="examples">
+                    <div class="contido justify-content-flex-start">
+                        <div class="item">1</div>
+                        <div class="item">2</div>
+                        <div class="item">3</div>
+                        <div class="item">4</div>
+                        <div class="item">5</div>
+                    </div>
+                    <div class="contido justify-content-flex-end">
+                        <div class="item">1</div>
+                        <div class="item">2</div>
+                        <div class="item">3</div>
+                        <div class="item">4</div>
+                        <div class="item">5</div>
+                    </div>
+                    <div class="contido justify-content-center">
+                        <div class="item">1</div>
+                        <div class="item">2</div>
+                        <div class="item">3</div>
+                        <div class="item">4</div>
+                        <div class="item">5</div>
+                    </div>
+                    <div class="contido justify-content-space-between">
+                        <div class="item">1</div>
+                        <div class="item">2</div>
+                        <div class="item">3</div>
+                        <div class="item">4</div>
+                        <div class="item">5</div>
+                    </div>
+                    <div class="contido justify-content-space-around">
+                        <div class="item">1</div>
+                        <div class="item">2</div>
+                        <div class="item">3</div>
+                        <div class="item">4</div>
+                        <div class="item">5</div>
+                    </div>
+                    <div class="contido justify-content-space-evenly">
+                        <div class="item">1</div>
+                        <div class="item">2</div>
+                        <div class="item">3</div>
+                        <div class="item">4</div>
+                        <div class="item">5</div>
+                    </div>
+                </div>
+            </section>
 
 
-    <p>Exemplo:</p>
-    <div class="container justify-content">
-        <div class="contido">flex-start</div>
-        <div class="contido">flex-end</div>
-        <div class="contido">center</div>
-        <div class="contido"><p>space-between</p><p>space-between</p></div>
-        <div class="contido"><p>space-around</p> <p>space-around</p></div>
-        <div class="contido"><p>space-evenly</p><p>space-evenly</p></div>
-        
-    </div>
-    <p>Exemplo:</p>
-    <div class="container flex-direction">
-        <div class="contido ">row</div>
-        <div class="contido">row-reverse</div>
-        <div class="contido">column</div>
-        <div class="contido">column-reverse</div>
- 
-    </div>
-    <p>Exemplo:</p>
-    <div class="container aling-itens">
-        <div class="contido">normal</div>
-        <div class="contido">stretch</div>
-        <div class="contido">center</div>
-        <div class="contido">flex-start</div>
-        <div class="contido">flex-end</div>
-        <div class="contido">start</div>
-        <div class="contido">end</div>
-        <div class="contido">baseline</div>
+            <section class="property">
+                <h2>flex-direction</h2>
+                <p>Essa propriedade estabelece o eixo-principal, assim, definindo a direção em que os itens flex do container estarão posicionados.</p>
+                <pre>
+                    .container {
+                        flex-direction: row | row-reverse | column | column-reverse;
+                    }
+                </pre>
+                <h3>Exemplos:</h3>
+                <div class="examples">
+                    <div class="contido flex-direction-row">
+                        <div class="item">1</div>
+                        <div class="item">2</div>
+                        <div class="item">3</div>
+                        <div class="item">4</div>
+                        <div class="item">5</div>
+                    </div>
+                    <div class="contido flex-direction-row-reverse">
+                        <div class="item">1</div>
+                        <div class="item">2</div>
+                        <div class="item">3</div>
+                        <div class="item">4</div>
+                        <div class="item">5</div>
+                    </div>
+                    <div class="contido flex-direction-column">
+                        <div class="item">1</div>
+                        <div class="item">2</div>
+                        <div class="item">3</div>
+                        <div class="item">4</div>
+                        <div class="item">5</div>
+                    </div>
+                    <div class="contido flex-direction-column-reverse">
+                        <div class="item">1</div>
+                        <div class="item">2</div>
+                        <div class="item">3</div>
+                        <div class="item">4</div>
+                        <div class="item">5</div>
+                    </div>           
+                </div>
+            </section>
 
-    </div>
-    <p>Exemplo:</p>
-    <div class="container flex-wrap">
-        <div class="contido">nowrap</div>
-        <div class="contido">wrap</div>
-        <div class="contido">wrap-reverse</div>
-      
-    </div>
-    <p>Exemplo:</p>
-    <div class="container flex-flow">
-        <div class="contido">flex-direction</div>
-        <div class="contido">flex-wrap</div>
-    </div>
+            <section class="property">
+                <h2>align-itens</h2>
+                <p>Isto define o comportamento de como os itens serão distribuidos em paralelo ao eixo vertical na linha atual.</p>
+                <pre>
+                    .container {
+                        align-itens:  center | stretch | flex-start | flex-end | baseline;
+                    }
+                </pre>
+                <h3>Exemplo:</h3>
+                <div class="examples">
+                    <div class="contido align-itens-stretch">
+                        <div class="item">1</div>
+                        <div class="item">2</div>
+                        <div class="item">3</div>
+                        <div class="item">4</div>
+                        <div class="item">5</div>
+                    </div>
+                    <div class="contido align-itens-center">
+                        <div class="item">1</div>
+                        <div class="item">2</div>
+                        <div class="item">3</div>
+                        <div class="item">4</div>
+                        <div class="item">5</div>
+                    </div>
+                    <div class="contido align-itens-flex-start">
+                        <div class="item">1</div>
+                        <div class="item">2</div>
+                        <div class="item">3</div>
+                        <div class="item">4</div>
+                        <div class="item">5</div>
+                    </div>
+                    <div class="contido align-itens-flex-end">
+                        <div class="item">1</div>
+                        <div class="item">2</div>
+                        <div class="item">3</div>
+                        <div class="item">4</div>
+                        <div class="item">5</div>
+                    </div>
+                    <div class="contido align-itens-baseline">
+                        <div class="item">1</div>
+                        <div class="item">2</div>
+                        <div class="item">3</div>
+                        <div class="item">4</div>
+                        <div class="item">5</div>
+                    </div>
+                </div>
+            </section>
 
-    <p>Exemplo:</p>
-    <div class="container align-content">
-        <div class="contido">stretch</div>
-        <div class="contido">center</div>
-        <div class="contido">flex-start</div>
-        <div class="contido">flex-end</div>
-        <div class="contido">p>space-between</p><p>space-between</p></div>
-        <div class="contido">space-around</p> <p>space-around</div>
-        <div class="contido">space-evenly</p><p>space-evenly</div>
-    </div>
+
+            <section class="property">
+                <h2>flex-wrap</h2>
+                <p>Por padrão, itens flex vão tentar se encaixar em uma linha. Você pode alterar isso para permitir que os itens sejam "envolvidos" por esta propriedade conforme a necessidade.</p>
+                <pre>
+                    .container {
+                        flex-wrap: nowrap | wrap | wrap-reverse;
+                    }
+                </pre>
+                <h3>Exemplo:</h3>
+                <div class="examples">
+                    <div class="contido flex-wrap-nowrap">
+                        <div class="item">1</div>
+                        <div class="item">2</div>
+                        <div class="item">3</div>
+                        <div class="item">4</div>
+                        <div class="item">5</div>
+                    </div>
+                    <div class="contido flex-wrap-wrap">
+                        <div class="item">1</div>
+                        <div class="item">2</div>
+                        <div class="item">3</div>
+                        <div class="item">4</div>
+                        <div class="item">5</div>
+                    </div>
+                    <div class="contido flex-wrap-wrap-reverse">
+                        <div class="item">1</div>
+                        <div class="item">2</div>
+                        <div class="item">3</div>
+                        <div class="item">4</div>
+                        <div class="item">5</div>
+                    </div>
+                
+                </div>
+            </section>
+
+            <section class="property">
+                <h2>flex-flow</h2>
+                <p>Este é um atalho/abreviação para o flex-direction e o flex-wrap, que juntos definem os eixos do container. O valor padrão é row nowrap.</p>
+                <pre>
+                    .container {
+                        flex-flow: flex-direction | flex-wrap;
+                    }
+                </pre>
+                <h3>Exemplo:</h3>
+                <div class="examples">
+                    <div class="contido flex-flow-direction">
+                        <div class="item">1</div>
+                        <div class="item">2</div>
+                        <div class="item">3</div>
+                        <div class="item">4</div>
+                        <div class="item">5</div>
+                    </div>
+                    <div class="contido flex-flow-wrap">
+                        <div class="item">1</div>
+                        <div class="item">2</div>
+                        <div class="item">3</div>
+                        <div class="item">4</div>
+                        <div class="item">5</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="property">
+                <h2>align-content</h2>
+                <p></p>
+                <pre>
+                    .container {
+                        align-content:  stretch | center | flex-start | flex-end | space-between | space-around | space-evenly;
+                    }
+                </pre>
+                <h3>Exemplo:</h3>
+                <div class="examples">
+                    <div class="contido align-content-stretch">
+                        <div class="item">1</div>
+                        <div class="item">2</div>
+                        <div class="item">3</div>
+                        <div class="item">4</div>
+                        <div class="item">5</div>
+                    </div>
+                    <div class="contido align-content-center">
+                        <div class="item">1</div>
+                        <div class="item">2</div>
+                        <div class="item">3</div>
+                        <div class="item">4</div>
+                        <div class="item">5</div>
+                    </div>
+                    <div class="contido align-content-flex-start">
+                        <div class="item">1</div>
+                        <div class="item">2</div>
+                        <div class="item">3</div>
+                        <div class="item">4</div>
+                        <div class="item">5</div>
+                    </div>
+                    <div class="contido align-content-flex-end">
+                        <div class="item">1</div>
+                        <div class="item">2</div>
+                        <div class="item">3</div>
+                        <div class="item">4</div>
+                        <div class="item">5</div>
+                    </div>
+                    <div class="contido align-content-space-between">
+                        <div class="item">1</div>
+                        <div class="item">2</div>
+                        <div class="item">3</div>
+                        <div class="item">4</div>
+                        <div class="item">5</div>
+                    </div>
+                    <div class="contido align-content-space-around">
+                        <div class="item">1</div>
+                        <div class="item">2</div>
+                        <div class="item">3</div>
+                        <div class="item">4</div>
+                        <div class="item">5</div>
+                    </div>
+                        <div class="contido align-content-space-evenly">
+                        <div class="item">1</div>
+                        <div class="item">2</div>
+                        <div class="item">3</div>
+                        <div class="item">4</div>
+                        <div class="item">5</div>
+                    </div>
+                </div>
+            </section>
+        </details>
+    </section>
 </body>
 </html>
