@@ -27,8 +27,8 @@
             <th class="valor">Valor</th>
         </tr>
         <tr>
-            <td class="propriedade">Display Flex</td>
-            <td class="valor">row</td>
+            <td class="propriedade">Display</td>
+            <td class="valor">Flex</td>
         </tr>
         <tr>
             <td class="propriedade">Justify Content</td>
@@ -36,49 +36,78 @@
         </tr>
         <tr>
             <td class="propriedade">Flex Direction</td>
-            <td class="valor">flex-start</td>
+            <td class="valor">row, row-reverse, column, column-reverse, initial, inherit</td>
         </tr>
         <tr>
             <td class="propriedade">Aling Itens</td>
-            <td class="valor">flex-start</td>
+            <td class="valor">normal, stretch, center, flex-start, flex-end, start, end, baseline, initial, inherit</td>
         </tr>
         <tr>
             <td class="propriedade">Flex Wrap</td>
-            <td class="valor">flex-start</td>
+            <td class="valor">nowrap, wrap, wrap-reverse, initial, inherit</td>
         </tr>
         <tr>
             <td class="propriedade">Flex Flow</td>
-            <td class="valor">flex-start</td>
+            <td class="valor">flex-direction, flex-wrap, initial, inherit</td>
         </tr>
         <tr>
-            <td class="propriedade">Aling Content</td>
+            <td class="propriedade">Align Content</td>
             <td class="valor">stretch, center, flex-start, flex-end, space-between, space-around, space-evenly, initial, inherit</td>
         </tr>
         
     </table>
+    
+    <p>Exemplo:</p>
+    <div class="container flex">
+        <div class="contido">Flex</div>
+    </div>
+
 
     <p>Exemplo:</p>
-    <div class="container1">
-        <div class="contido">row</div>
-        <div class="contido">row-reverse</div>
-        <div class="contido">column</div>
-        <div class="contido">column-reverse</div>
-        <div class="contido">initial</div>
-        <div class="contido">inherit</div>
-    </div>
-    <p>Exemplo:</p>
-    <div class="container2">
+    <div class="container justify-content">
         <div class="contido">flex-start</div>
-        <div class="contido">flex-end	</div>
+        <div class="contido">flex-end</div>
         <div class="contido">center</div>
         <div class="contido"><p>space-between</p><p>space-between</p></div>
         <div class="contido"><p>space-around</p> <p>space-around</p></div>
         <div class="contido"><p>space-evenly</p><p>space-evenly</p></div>
-        <div class="contido">initial</div>
-        <div class="contido">inherit</div>
+        
     </div>
     <p>Exemplo:</p>
-    <div class="container3">
+    <div class="container flex-direction">
+        <div class="contido ">row</div>
+        <div class="contido">row-reverse</div>
+        <div class="contido">column</div>
+        <div class="contido">column-reverse</div>
+ 
+    </div>
+    <p>Exemplo:</p>
+    <div class="container aling-itens">
+        <div class="contido">normal</div>
+        <div class="contido">stretch</div>
+        <div class="contido">center</div>
+        <div class="contido">flex-start</div>
+        <div class="contido">flex-end</div>
+        <div class="contido">start</div>
+        <div class="contido">end</div>
+        <div class="contido">baseline</div>
+
+    </div>
+    <p>Exemplo:</p>
+    <div class="container flex-wrap">
+        <div class="contido">nowrap</div>
+        <div class="contido">wrap</div>
+        <div class="contido">wrap-reverse</div>
+      
+    </div>
+    <p>Exemplo:</p>
+    <div class="container flex-flow">
+        <div class="contido">flex-direction</div>
+        <div class="contido">flex-wrap</div>
+    </div>
+
+    <p>Exemplo:</p>
+    <div class="container align-content">
         <div class="contido">stretch</div>
         <div class="contido">center</div>
         <div class="contido">flex-start</div>
@@ -86,8 +115,6 @@
         <div class="contido">p>space-between</p><p>space-between</p></div>
         <div class="contido">space-around</p> <p>space-around</div>
         <div class="contido">space-evenly</p><p>space-evenly</div>
-        <div class="contido">initial</div>
-        <div class="contido">inherit</div>
     </div>
 </body>
 </html>
