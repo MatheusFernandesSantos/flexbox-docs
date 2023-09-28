@@ -15,7 +15,7 @@ html{
     --cor-secundaria: #ffffff;
     --cor-terciaria: #04d7f3;
     --cor-quartenaria: #48e400;
-    --cor-fundo: #ffffff;
+    --cor-fundo: #00fffb9c;
     --fonte-primaria: 'Times New Roman', serif;
     --fonte-secundaria: Arial, Helvetica, sans-serif;
 }
@@ -93,8 +93,8 @@ tr:hover {
 
 
 .container  {
-    background-color: var(--cor-secundaria);
-    border: 40px solid var(--cor-primaria); /* Equivalente à cor #000000 */
+    background-color: var(--cor-fundo);
+    border: 20px solid var(--cor-primaria); /* Equivalente à cor #000000 */
     border-radius: 1%;
     display: flex;
     flex-direction: column;
