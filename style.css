@@ -9,13 +9,12 @@ html{
     text-align: initial;
 }
 
-
 :root {
-    --cor-primaria: #14023d;
-    --cor-secundaria: #ffffff;
-    --cor-terciaria: #04d7f3;
-    --cor-quartenaria: #48e400;
-    --cor-fundo: #00fffb9c;
+    --cor-primaria: #053B50;
+    --cor-secundaria: #176B87;
+    --cor-terciaria: #64CCC5;
+    --cor-quartenaria: #EEEEEE;
+    --cor-fundo: #EEEEEE;
     --fonte-primaria: 'Times New Roman', serif;
     --fonte-secundaria: Arial, Helvetica, sans-serif;
 }
@@ -26,24 +25,24 @@ body {
  }
  
  .titulo-principal{
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
-    font-size: 30pt;
-}
-
-.subtitulo-principal{
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
-    font-size: 18pt;
-    text-decoration: underline;
-}
-
-.titulo-de-artigo{
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
-    text-decoration:underline;
-    font-size: 14pt;
-    padding-bottom: 10px;
+     font-family: Arial, Helvetica, sans-serif;
+     text-align: center;
+     font-size: 30pt;
+    }
+    
+    .subtitulo-principal{
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+        font-size: 18pt;
+        text-decoration: underline;
+    }
+    
+    .titulo-de-artigo{
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+        text-decoration:underline;
+        font-size: 14pt;
+        padding-bottom: 10px;
 }
 
  table, th, td {
@@ -54,6 +53,11 @@ body {
 
 table {
     width: 100%;
+}
+
+.examples{
+    display: flex;
+    justify-content: space-around;
 }
 
 .propriedade {
@@ -75,8 +79,10 @@ tr:hover {
 
 
 .item {
-    background-color: var(--third-color);
-
+    background-color: var(--cor-terciaria);
+    width: 3rem;
+    height: 3rem;
+    background: rg(255, 123, 0);
     width: 50px;
     border-radius: 5px;
     display: flex;
@@ -105,8 +111,8 @@ tr:hover {
 /* Estilos da página que sobrescreverão os resets anteriores */
 
 .contido {
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     background-color: var(--cor-terciaria);
     border: 2px solid var(--cor-quartenaria);
     display: flex;
@@ -120,7 +126,7 @@ tr:hover {
 
 .contido:hover {
     background-color: #48e400;
-    width: 1000px;
+    width: 400px;
     color: black;
     font-size: 14px;
 }
@@ -135,32 +141,32 @@ tr:hover {
 
 .justify-content-flex-start {
     justify-content: flex-start;
-    height: 150px;
+    height: 200px;
 }
 
 .justify-content-flex-end {
     justify-content: flex-end;
-    height: 150px;
+    height: 200px;
 }
 
 .justify-content-center {
     justify-content: center;
-    height: 150px;
+    height: 200px;
 }
 
 .justify-content-space-between {
     justify-content: space-between;
-    height: 150px;
+    height: 200px;
 }
 
 .justify-content-space-around {
     justify-content: space-around;
-    height: 150px;
+    height: 200px;
 }
 
 .justify-content-space-evenly {
     justify-content: space-evenly;
-    height: 150px;
+    height: 200px;
 }
 
 
@@ -168,115 +174,128 @@ tr:hover {
 
 .flex-direction-row {
     flex-direction:row;
-    height: 150px;
+    height: 200px;
 }
 
 .flex-direction-row-reverse {
     flex-direction: row-reverse;
-    height: 150px;
+    height: 200px;
 }
 
 .flex-direction-column {
     flex-direction: column;
-    height: 150px;
+    height: 200px;
 }
 
 .flex-direction-column-reverse {
     flex-direction: column-reverse;
-    height: 150px;
+    height: 200px;
 }
 
 
 /* Propriedade Align Itens */
 
-.align-itens-flex-stretch {
+.align-items-flex-stretch {
     align-items: stretch;
-    height: 150px;
+    height: 200px;
 }
-.align-itens-flex-center {
+.align-items-flex-center {
     align-items: center;
-    height: 150px;
+    height: 200px;
 }
 
-.align-itens-flex-start {
+.align-items-flex-start {
     align-items: flex-start;
-    height: 150px;
+    height: 200px;
 }
 
-.align-itens-flex-end {
+.align-items-flex-end {
     align-items: flex-end;
-    height: 150px;
+    height: 200px;
 }
 
-
-.align-itens-baseline {
+.align-items-baseline {
     align-items: baseline;
-    height: 150px;
+    height: 200px;
 }
 
 /* Flex Wrap */
 
 .flex-wrap-nowrap {
     flex-wrap: nowrap;
-    height: 150px;
+    height: 200px;
 }
 
 .flex-wrap-wrap {
     flex-wrap: wrap;
-    height: 150px;
+    height: 200px;
 }
 
 .flex-wrap-wrap-reverse {
     flex-wrap: wrap-reverse;
-    height: 150px;
+    height: 200px;
 }
 
 /* Flex Flow */
 
 .flex-flow-direction {
-    flex-flow: column wrap;
-    height: 150px;
+    flex-flow: row wrap-reverse;
+    height: 200px;
 }
 
 .flex-flow-wrap {
-    flex-flow: column ;
-    height: 150px;
+    flex-flow: column wrap ;
+    height: 200px;
 }
 
 /* Propriedade Align-Content */
 
 .align-content-stretch {
     align-content: stretch;
-    height: 150px;
+    height: 200px;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .align-content-center {
     align-content: center;
-    height: 150px;
+    height: 200px;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .align-content-flex-start {
     align-content: flex-start;
-    height: 150px;
+    height: 200px;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 
 .align-content-flex-end {
     align-content: flex-end;
-    height: 150px;
+    height: 200px;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .align-content-space-between {
     align-content: space-between;
-    height: 150px;
+    height: 200px;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .align-content-space-around {
     align-content: space-around;
-    height: 150px;
+    height: 200px;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .align-content-space-evenly {
     align-content: space-evenly;
-    height: 150px;
+    height: 200px;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
